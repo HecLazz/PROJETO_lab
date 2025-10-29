@@ -26,3 +26,18 @@ Configurei IP's para cada escopo e máquina, exemplo:
 - `metasploitable eth0` - 10.10.10.5/24  
 - `ubuntu enp0s3` - 10.20.20.10/24
 - `metasploitable eth1` - 10.20.20.5/24
+---
+**DAY - 2**
+
+Começar a instalar e configurar o GrayLog na máquina com Ubuntu Server. Após algumas pesquisas cheguei a conclusão de fazer toda essa instalação através do Docker.
+
+- Link do Graylog: https://github.com/lawrencesystems/graylog.git
+
+Me deparei com um problema, o graylog estava rodando infinitamente e não iniciava nunca, percebi que o MongoDB agora exige AVX do processador por mais que meu computador tenha, o virtualbox parece não transmitir essa funcionalidade para as máquinas, mesmo eu habilitando o VT-x/AMD dentro do virtualbox.
+A partir disso fui pesquisar outras ferramentas e me deparei com o Security Onion, então vou adaptar o laboratório para essa ferramenta.
+
+Link do download https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/DOWNLOAD_AND_VERIFY_ISO.md
+
+Hoje praticamente foi só pesquisando qual seria a melhor ferramenta para o laboratório, e cheguei a conclusão de adaptar o Security Onion mesmo, ainda mais que tem o Suricata que é uma ferramenta interessantíssima por ser uma IDS, IPS e NSM, isso vai elevar meus estudos para um nível maior.
+
+Apesar dos impasses e erros, acredito que dar um passo pra trás é importante para você conseguir ter uma noção maior e melhorar as ideias, e começar a pesquisar melhor analisando cada detalhe, torna suas ideias mais forte e melhores.
