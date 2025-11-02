@@ -41,3 +41,16 @@ Link do download https://github.com/Security-Onion-Solutions/securityonion/blob/
 Hoje praticamente foi só pesquisando qual seria a melhor ferramenta para o laboratório, e cheguei a conclusão de adaptar o Security Onion mesmo, ainda mais que tem o Suricata que é uma ferramenta interessantíssima por ser uma IDS, IPS e NSM, isso vai elevar meus estudos para um nível maior.
 
 Apesar dos impasses e erros, acredito que dar um passo pra trás é importante para você conseguir ter uma noção maior e melhorar as ideias, e começar a pesquisar melhor analisando cada detalhe, torna suas ideias mais forte e melhores.
+
+---
+
+PROJETO — Laboratório 
+**Day 3**
+
+Hoje enfrentei um problema de hardware ao tentar rodar o Security Onion, então mudei de estratégia e adotei o Wazuh via OVA (sistema baseado em CentOS). Configurei a rede com duas placas: uma em modo bridge e outra na rede interna blue-team-net. Fiz o teste de conectividade entre o Wazuh e a máquina vulnerável (Metasploitable) — ping OK.
+
+Avaliei também a opção de instalar o Wazuh em uma VM Ubuntu, mas, por ora, a OVA dedicada está atendendo bem. Uma coisa que me chamou atenção: o Wazuh é bastante customizável e permite integrações úteis (ex.: VirusTotal), o que abre muitas possibilidades para análises e automação.
+
+Próximo passo: implantar o agente Wazuh no Metasploitable. Como o Metasploitable é um sistema legado, imagino que a instalação direta pode ter incompatibilidades — então minha abordagem será pesquisar alternativas (agent forwarder, logs via syslog, ou versão adaptada do agente) e documentar cada tentativa. Tudo vai para o repositório com prints, comandos e notas.
+
+Se você já passou por isso ou tem dica sobre agentes em sistemas legados, compartilha comigo — toda sugestão é bem-vinda!
