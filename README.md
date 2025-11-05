@@ -43,7 +43,7 @@ Hoje praticamente foi só pesquisando qual seria a melhor ferramenta para o labo
 Apesar dos impasses e erros, acredito que dar um passo pra trás é importante para você conseguir ter uma noção maior e melhorar as ideias, e começar a pesquisar melhor analisando cada detalhe, torna suas ideias mais forte e melhores.
 
 ---
-**Day 3**
+**DAY 3**
 
 Hoje enfrentei um problema de hardware ao tentar rodar o Security Onion, então mudei de estratégia e adotei o Wazuh via OVA (sistema baseado em CentOS). Configurei a rede com duas placas: uma em modo bridge e outra na rede interna blue-team-net. Fiz o teste de conectividade entre o Wazuh e a máquina vulnerável (Metasploitable) — ping OK.
 
@@ -54,7 +54,7 @@ Próximo passo: implantar o agente Wazuh no Metasploitable. Como o Metasploitabl
 Se você já passou por isso ou tem dica sobre agentes em sistemas legados, compartilha comigo — toda sugestão é bem-vinda!
 
 --- 
-**Day 4**
+**DAY 4**
 
 Hoje dei mais um passo no laboratório: troquei o Metasploitable 2 pelo Metasploitable 3, que é mais atual e contém vulnerabilidades modernas — inclusive em Windows — o que traz casos de teste mais realistas. Após pesquisar, confirmei que essa mudança vai facilitar a integração do agente Wazuh, então optei por essa atualização.
 
