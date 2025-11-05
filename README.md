@@ -54,3 +54,23 @@ Avaliei também a opção de instalar o Wazuh em uma VM Ubuntu, mas, por ora, a 
 Próximo passo: implantar o agente Wazuh no Metasploitable. Como o Metasploitable é um sistema legado, imagino que a instalação direta pode ter incompatibilidades — então minha abordagem será pesquisar alternativas (agent forwarder, logs via syslog, ou versão adaptada do agente) e documentar cada tentativa. Tudo vai para o repositório com prints, comandos e notas.
 
 Se você já passou por isso ou tem dica sobre agentes em sistemas legados, compartilha comigo — toda sugestão é bem-vinda!
+
+--- 
+
+**Day 4**
+
+Hoje dei mais um passo no laboratório: troquei o Metasploitable 2 pelo Metasploitable 3, que é mais atual e contém vulnerabilidades modernas — inclusive em Windows — o que traz casos de teste mais realistas. Após pesquisar, confirmei que essa mudança vai facilitar a integração do agente Wazuh, então optei por essa atualização.
+
+No site oficial há duas opções (`Ubuntu e Windows Server 2008`). Por ora vou usar apenas a imagem `Ubuntu` para manter o fluxo de testes mais simples.
+
+Link do metasploitable 3: https://portal.cloud.hashicorp.com/vagrant/discover/rapid7 
+
+
+O que fiz hoje:
+
+- Baixei o `Metasploitable 3`;
+
+- Extraí a OVA usando PowerShell: `tar -xvf <nome_do_arquivo>`;
+
+- Planejo, no próximo dia, configurar o adaptador de rede da VM e instalar o agente Wazuh para começar a coletar logs e monitorar a VM.
+
