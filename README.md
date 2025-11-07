@@ -70,4 +70,54 @@ O que fiz hoje:
 - Extraí a OVA usando PowerShell: `tar -xvf <nome_do_arquivo>`;
 
 - Planejo, no próximo dia, configurar o adaptador de rede da VM e instalar o agente Wazuh para começar a coletar logs e monitorar a VM.
+---
 
+**Day 5** 
+
+Instalação do agente Wazuh no Metasploitable 3
+
+Hoje alcancei um marco importante no laboratório: consegui interligar todas as máquinas e instalar o Wazuh Agent no Metasploitable 3 (Ubuntu).
+
+**Passos realizados**
+1. Configuração do Wazuh Manager (CentOS):
+Adicionei o IP local da rede blue-team-net ao arquivo de configuração principal:
+`sudo nano /var/ossec/etc/ossec.conf`
+
+Na seção <remote>, inseri o IP local do manager:
+`<allowed-ips>SEU-IP</allowed-ips>`
+
+A comunicação entre o Manager e os agentes é feita via TCP na porta 1514 (padrão).
+Pode-se confirmar com o comando:
+`sudo netstat -tulnp | grep 1514`
+
+Isso mostra que o Wazuh está escutando em todas as interfaces de rede.
+
+2. Configuração de rede no Metasploitable 3:
+
+`sudo nano /etc/network/interfaces`
+
+Após editar o IP da interface de rede, reiniciei o serviço:
+`sudo /etc/init.d/networking restart`
+
+3. Instalação do agente Wazuh:
+
+Primeiro, baixei o pacote: wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.0-1_amd64.deb
+
+Tentei instalar com: `sudo WAZUH_MANAGER='<SEU-IP>' dpkg -i ./wazuh-agent_4.14.0-1_amd64.deb`
+
+Erro encontrado:
+O script de pós-instalação usa systemd, e o Metasploitable não tem suporte completo. Resultado:
+`dpkg: error processing package wazuh-agent (--install): subprocess installed post-installation script returned error exit status 6`
+
+4. Solução aplicada:
+
+Removi a instalação e reconfigurei manualmente:
+
+- `sudo dpkg --configure -a`
+- `sudo dpkg --purge --force-all wazuh-agent`
+- `sudo dpkg --install wazuh-agent_4.14.0-1_amd64.deb`
+
+Após isso, adicionei manualmente o IP do Manager:
+`sudo nano /var/ossec/etc/ossec.conf`
+
+No campo `<address>`, defini o IP do Wazuh Manager.
