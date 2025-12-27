@@ -89,7 +89,7 @@ Hoje alcancei um marco importante no laboratório: consegui interligar todas as 
 Adicionei o IP local da rede blue-team-net ao arquivo de configuração principal:
 `sudo nano /var/ossec/etc/ossec.conf`
 
-Na seção <remote>, inseri o IP local do manager:
+Na seção `<remote>`, inseri o IP local do manager:
 `<allowed-ips>SEU-IP</allowed-ips>`
 
 A comunicação entre o Manager e os agentes é feita via TCP na porta 1514 (padrão).
