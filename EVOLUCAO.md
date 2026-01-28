@@ -126,4 +126,25 @@ Removi a instalação e reconfigurei manualmente:
 Após isso, adicionei manualmente o IP do Manager:
 `sudo nano /var/ossec/etc/ossec.conf`
 
-No campo `<address>`, defini o IP do Wazuh Manager.
+No campo `address`, defini o IP do Wazuh Manager.
+
+---
+
+**Fase 1 – Fundamentos e Resposta a Incidentes**
+
+Nesta fase, o foco do projeto é o estudo de **conceitos fundamentais de cibersegurança**, com testes práticos realizados no laboratório já montado, **sem alterações na arquitetura do ambiente**.
+
+Foi desenvolvido um **playbook de resposta a incidentes (Incident Response)** com base em templates amplamente utilizados no mercado, com o objetivo de padronizar a análise e a tomada de decisão em cenários de segurança.
+
+O playbook pode ser encontrado no diretório:
+
+`incident-response-playbooks/brute-force/Brute_Force_SSH_Playbook.pdf`
+
+Para validar tanto o funcionamento do **Wazuh** quanto a aplicação prática do playbook — além de exercitar conceitos de **Pentesting** — foi realizada uma **simulação de ataque de brute force SSH utilizando a ferramenta Hydra**, direcionada a uma máquina vulnerável em ambiente controlado.
+
+Durante a simulação, o Wazuh foi responsável pela coleta e análise dos logs, permitindo a detecção, correlação e classificação do incidente.  
+Toda a análise resultante dessa simulação está documentada no diretório `cases`.
+
+> ⚠️ Todos os testes foram realizados em **ambiente de laboratório**, exclusivamente para fins educacionais.
+
+
