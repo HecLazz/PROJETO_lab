@@ -16,3 +16,10 @@ caracterizando um ataque de brute force.
 - T1021.004 – Remote Services (SSH)
 
 Nenhuma autenticação bem-sucedida foi identificada.
+
+### New Analysis - After SSH Hardening
+
+Após mudar a porta SSH e limitar MaxAuthTries, as tentativas de brute force atingiram o limite de autenticação em menos de um minuto.
+
+Isso confirma que o MaxAuthTries reduz a superfice de ataque, mas não impede de ataques automáticos.
+
