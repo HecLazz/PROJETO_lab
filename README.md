@@ -24,10 +24,4 @@ O objetivo do projeto é estudar, implementar e simular cenários reais de segur
 - **Attacker Machine** (Kali Linux)
 - **rede interna isolada (`blue-team-net` `red-team-net`)**
 
-## 📁 Documentação do Projeto
-
-- **EVOLUCAO.md** → diário técnico com logs, configurações, problemas, soluções e avanços.
-- **configs/** → arquivos de configuração criados durante o projeto.
-- **scripts/** → scripts úteis para automação e testes.
-
 Este laboratório está em constante atualização conforme avanço nos estudos e testes práticos em segurança ofensiva e defensiva.
