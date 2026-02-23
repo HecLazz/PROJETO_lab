@@ -6,7 +6,7 @@ a detecção do ataque com Wazuh e as medidas de hardening aplicadas para reduzi
 ## Environment
 
 - Attacker: Kali Linux
-- Target: Metasploitable 3 (Ubuntu)
+- Target: Ubuntu-Server
 - Monitoring: Wazuh Manager
 - Network: Segmented (Red Team / Blue Team)
 
