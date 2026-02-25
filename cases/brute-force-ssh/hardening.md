@@ -10,6 +10,8 @@ com o objetivo de dificultar novas tentativas de exploração.
 - Redução do tempo de autenticação (120s → 60s)
 - Ajuste de firewall para permitir apenas a nova porta configurada
 - Instalação e Configuração do Fail2Ban
+- Configurar chave SSH
+- Configurar no firewall quais IPs vão se conectar no SSH
 
 ## Validation
 
@@ -19,6 +21,8 @@ Após as alterações:
 - Tentativas de brute force com Hydra falharam na porta padrão
 - Bloqueio de IP com Fail2Ban, retornando *connection refused*
 - O atacante precisaria identificar a nova porta antes de tentar qualquer exploração
+- Sem a chave SSH não consegue mais se conectar
+- Sem o IP permitido no firewall não consegue mais se conectar
 
 Essas medidas não impedem ataques, mas aumentam significativamente o esforço do atacante,
 reduzindo a superfície de ataque e melhorando a postura de segurança do sistema.
