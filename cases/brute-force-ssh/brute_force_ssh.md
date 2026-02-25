@@ -50,9 +50,10 @@ De acordo com o playbook, as seguintes ações foram consideradas:
 
 **Hardening Recomendado**
 
-- Avaliar autenticação por chave SSH
+- Autenticação por chave SSH
 - Restringir usuários permitidos no serviço SSH
 - Reduzir exposição do serviço a ataques automatizados
+- Configurar o firewall para permitir os IPs que podem se conectar
 
 **Lições Aprendidas**
 
@@ -62,3 +63,4 @@ De acordo com o playbook, as seguintes ações foram consideradas:
 - Hardening reduz a recorrência de ataques
 
 **⚠️ Nota:** Este estudo foi realizado em ambiente de laboratório, sem utilização de dados reais ou ambientes produtivos.
+
