@@ -24,3 +24,9 @@ Após mudar a porta SSH e limitar MaxAuthTries, as tentativas de brute force ati
 Isso confirma que o MaxAuthTries reduz a superfice de ataque, mas não impede de ataques automáticos.
 
 Após instalar e configurar o Fail2Ban, percebi que depois de 3 tentativas e erro, o IP foi bloqueado e ao tentar novamente acessar, o SSH retorna *connection refused*. Significa que o Fail2Ban está agindo como o esperado.
+
+### SSH Key
+
+Após configurar a chave SSH qualquer tentativa de acesso foi ineficaz, próprio SSH aponta que precisa da chave para conectar.
+
+Após configurar o firewall permitindo IPs especificos, conexões que são diferentes nem acusa tentativa de conexões.
